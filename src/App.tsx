@@ -10,9 +10,8 @@ function App() {
     <>
       <Header />
       <Main />
-      <Footer children="© 2024 Kaczmarek Adrian" />
+      <Footer children="© 2024 Kaczmarek Adrian ❤️️" />
     </>
   );
 }
-
 export default App;
