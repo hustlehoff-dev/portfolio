@@ -429,17 +429,18 @@ a {
 .projects-wrapper {
   display: flex;
   justify-content: center;
+  background: $off-white;
   .projects-contents {
     display: flex;
     flex-direction: column;
+    padding-top: 100px;
+    padding-bottom: 128px;
+    width: 100%;
+    padding: 0 1em;
     .projects-heading {
-      background: grey;
     }
     .project-wrapper {
-      display: flex;
-
       .project-info-wrapper {
-        background: crimson;
       }
       .project-image-wrapper {
         height: 200px;

@@ -399,19 +399,15 @@ a {
 .projects-wrapper {
   display: flex;
   justify-content: center;
+  background: #f9f9f9;
 }
 .projects-wrapper .projects-contents {
   display: flex;
   flex-direction: column;
-}
-.projects-wrapper .projects-contents .projects-heading {
-  background: grey;
-}
-.projects-wrapper .projects-contents .project-wrapper {
-  display: flex;
-}
-.projects-wrapper .projects-contents .project-wrapper .project-info-wrapper {
-  background: crimson;
+  padding-top: 100px;
+  padding-bottom: 128px;
+  width: 100%;
+  padding: 0 1em;
 }
 .projects-wrapper .projects-contents .project-wrapper .project-image-wrapper {
   height: 200px;
