@@ -417,7 +417,15 @@ a {
 
 .contact-wrapper {
   display: flex;
+  justify-content: center;
+  background: #f9f9f9;
 }
+.contact-wrapper .contact-contents {
+  padding-top: 100px;
+  padding-bottom: 128px;
+  padding: 0 1em;
+}
+
 footer {
   display: flex;
   align-items: center;

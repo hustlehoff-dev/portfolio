@@ -453,7 +453,12 @@ a {
 // Contact section
 .contact-wrapper {
   display: flex;
+  justify-content: center;
+  background: $off-white;
   .contact-contents {
+    padding-top: 100px;
+    padding-bottom: 128px;
+    padding: 0 1em;
   }
 }
 
