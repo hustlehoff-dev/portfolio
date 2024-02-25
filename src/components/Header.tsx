@@ -1,4 +1,26 @@
-function Header() {
+interface Props {
+  selectedLanguage: string;
+  setSelectedLanguage: React.Dispatch<React.SetStateAction<string>>;
+}
+function Header({ selectedLanguage, setSelectedLanguage }: Props) {
+  const language: { [key: string]: { [key: string]: string } } = {
+    en: {
+      home: "Home",
+      about: "About",
+      tech: "Techstack",
+      contact: "Contact",
+      english: "English",
+      polish: "Polish",
+    },
+    pl: {
+      home: "Start",
+      about: "O mnie",
+      tech: "Technologie",
+      contact: "Kontakt",
+      english: "Angielski",
+      polish: "Polski",
+    },
+  };
   return (
     <header>
       <div className="header-logo">
@@ -14,24 +36,43 @@ function Header() {
 
       <nav className="header-navigation">
         <a className="hover-lift" href="#home">
-          <span className="hover-lift-deep">Home</span>
-          <span className="hover-lift-active">Home</span>
+          <span className="hover-lift-deep">
+            {language[selectedLanguage].home}
+          </span>
+          <span className="hover-lift-active">
+            {language[selectedLanguage].home}
+          </span>
         </a>
         <a className="hover-lift" href="#about-me">
-          <span className="hover-lift-deep">About</span>
-          <span className="hover-lift-active">About</span>
+          <span className="hover-lift-deep">
+            {language[selectedLanguage].about}
+          </span>
+          <span className="hover-lift-active">
+            {language[selectedLanguage].about}
+          </span>
         </a>
-        <a className="hover-lift" href="#projects">
-          <span className="hover-lift-deep">Work</span>
-          <span className="hover-lift-active">Work</span>
+        <a className="hover-lift" href="#techstack">
+          <span className="hover-lift-deep">
+            {language[selectedLanguage].tech}
+          </span>
+          <span className="hover-lift-active">
+            {language[selectedLanguage].tech}
+          </span>
         </a>
         <a className="hover-lift" href="#contact">
-          <span className="hover-lift-deep">Contact</span>
-          <span className="hover-lift-active">Contact</span>
+          <span className="hover-lift-deep">
+            {language[selectedLanguage].contact}
+          </span>
+          <span className="hover-lift-active">
+            {language[selectedLanguage].contact}
+          </span>
         </a>
-        <select>
-          <option value="en">English</option>
-          <option value="pl">Polish</option>
+        <select
+          value={selectedLanguage}
+          onChange={(e) => setSelectedLanguage(e.target.value)}
+        >
+          <option value="en">{language.en.english}</option>
+          <option value="pl">{language.pl.polish}</option>
         </select>
       </nav>
     </header>

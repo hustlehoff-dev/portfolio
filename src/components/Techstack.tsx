@@ -5,15 +5,14 @@ const Techstack = () => {
         <div className="tech-contents">
           <div className="tech-info">
             <h3 className="pre-heading">Techstack</h3>
-            <h2 className="heading scroll-reveal">
-              Learning never exhausts the mind.
+            <h2 className="heading scroll-reveal shorter">
+              "Learning never exhausts the mind", therefore my aim is constant
+              improvement.
             </h2>
             <ul className="tech-grid">
               <li>
                 <p className="p-1">HTML5</p>
-                <p className="p-2">
-                  Many years of astonishing responsive design
-                </p>
+                <p className="p-2">Astonishing responsive design</p>
               </li>
               <li>
                 <p className="p-1">Javascript</p>

@@ -99,6 +99,9 @@ header a {
   cursor: pointer;
   font-family: Mulish, sans-serif;
   font-weight: 900;
+  width: 100%;
+  text-align: right;
+  margin-right: 32px;
   background: transparent;
 }
 .header-navigation select {
@@ -280,7 +283,7 @@ a {
   font-family: Poppins;
 }
 .heading span {
-  color: #db1414;
+  color: #e6e6e6;
 }
 
 .about-me-wrapper {
@@ -460,7 +463,6 @@ footer {
   position: relative;
   line-height: 1.5em;
   height: 1.5em;
-  width: 5em;
   display: flex;
   justify-content: flex-end;
   -webkit-clip-path: inset(0px);
@@ -499,8 +501,32 @@ footer {
   animation: scroll-reveal linear forwards;
   animation-timeline: view();
   animation-range: contain;
-  animation-range-start: contain -50vh;
+  animation-range-start: contain -35vh;
   animation-range-end: contain 20vh;
+  display: inline;
+}
+.scroll-reveal.shorter {
+  animation-range-start: contain -20vh;
+  animation-range-end: contain 20vh;
+}
+.scroll-reveal.shorter-2 {
+  animation-range-start: contain 0vh;
+  animation-range-end: contain 20vh;
+}
+.scroll-reveal span {
+  line-height: 1.2em;
+  color: rgba(0, 0, 0, 0.1);
+  background-image: linear-gradient(270deg, #db1414, #db1414);
+  filter: saturate(150%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  animation: scroll-reveal linear forwards;
+  animation-timeline: view();
+  animation-range: contain;
+  animation-range-start: contain 10vh;
+  animation-range-end: contain 16vh;
   display: inline;
 }
 
