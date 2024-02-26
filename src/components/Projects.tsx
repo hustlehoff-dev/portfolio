@@ -5,7 +5,7 @@ const Projects = () => {
         <div className="projects-contents">
           <div className="projects-heading">
             <h3 className="pre-heading">Projects</h3>
-            <h2 className="heading scroll-reveal shorter-2">
+            <h2 className="heading scroll-reveal">
               Glimpse on projects I delivered
             </h2>
           </div>

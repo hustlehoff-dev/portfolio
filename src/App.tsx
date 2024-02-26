@@ -5,7 +5,7 @@ import Header from "./components/Header";
 import Home from "./components/Home";
 import Aboutme from "./components/About-me";
 import Techstack from "./components/Techstack";
-import Projects from "./components/Projects";
+//import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 
 function App() {
@@ -19,9 +19,8 @@ function App() {
       <main id="main">
         <Home selectedLanguage={selectedLanguage} />
         <Aboutme selectedLanguage={selectedLanguage} />
-        <Techstack />
-        <Projects />
-        <Contact />
+        <Techstack selectedLanguage={selectedLanguage} />
+        <Contact selectedLanguage={selectedLanguage} />
       </main>
       <Footer children="© 2024 Kaczmarek Adrian ❤️️" />
     </>

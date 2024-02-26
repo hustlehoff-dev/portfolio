@@ -3,7 +3,7 @@ interface Props {
 }
 const Home = ({ selectedLanguage }: Props) => {
   return (
-    <section id="home ">
+    <section id="home">
       <div className="home-wrapper background-p">
         <div className="home-contents">
           <div className="home-front">
@@ -11,12 +11,11 @@ const Home = ({ selectedLanguage }: Props) => {
             <h1 className="home-heading">
               {selectedLanguage === "en" ? (
                 <>
-                  Making <span className="glitch">killer designs</span> since
-                  2020
+                  Making <span>killer designs</span> since 2020
                 </>
               ) : (
                 <>
-                  Koduje <span className="glitch">genialny design</span>
+                  Koduje <span>genialny design</span>
                   <br /> od roku
                   <br /> 2020
                 </>

@@ -1,62 +1,111 @@
-const Techstack = () => {
+interface Props {
+  selectedLanguage: string;
+}
+
+const Techstack = ({ selectedLanguage }: Props) => {
+  const lang: { [key: string]: { [key: string]: string } } = {
+    en: {
+      tech: "Techstack",
+      techHeading:
+        '"Learning never exhausts the mind", therefore my aim is constant improvement.',
+      html5: "HTML5",
+      html5Desc: "Astonishing responsive design",
+      javascript: "Javascript",
+      javascriptDesc: "Turning coffee into code faster than Bolt",
+      scss: "SCSS",
+      scssDesc: "Websites looking so good you just swipe right",
+      seo: "SEO",
+      seoDesc: "I will make you disappear, from the bottom of Google",
+      copyWriting: "Copywriting",
+      copyWritingDesc:
+        "Writing copy, that increases users engagement (at least I think so)",
+      sem: "SEM",
+      semDesc:
+        "Like my SEO's hotter sister, makes your ads pop and your clicks count",
+      react: "React",
+      reactDesc: "UI's so responsive, they reply unasked",
+      wordpress: "Wordpress",
+      wordpressDesc: "I used to take shortcuts and they were still beautiful",
+      git: "Git",
+      gitDesc: "Saves my code from any disasters",
+    },
+    pl: {
+      tech: "Technologie",
+      techHeading:
+        '"Proces nauki nigdy nie wyczerpuje umysłu." Moim celem jest ciągłe doskonalenie.',
+      html5: "HTML5",
+      html5Desc: "Zachwycający responsywny design",
+      javascript: "Javascript",
+      javascriptDesc: "Przekształcam kawę w kod szybciej niż biega Bolt",
+      scss: "SCSS",
+      scssDesc: "Strony wyglądają tak dobrze, że po prostu przesuwasz w prawo",
+      seo: "SEO",
+      seoDesc: "Sprawię, że znikniesz z dna Google",
+      copyWriting: "Copywriting",
+      copyWritingDesc:
+        "Piszę treści, które zwiększają zaangażowanie użytkowników (bez dyskusji)",
+      sem: "SEM",
+      semDesc:
+        "Jak gorąca siostra mojego SEO, sprawia, że Twoje reklamy przyciągają uwagę, a kliknięcia się liczą",
+      react: "React",
+      reactDesc:
+        "Interfejsy użytkownika tak responsywne, że odpowiadają niepytane",
+      wordpress: "Wordpress",
+      wordpressDesc: "Kiedyś chodziłem na skróty, ale droga nadal była piękna",
+      git: "Git",
+      gitDesc: "Ratuje mój kod przed wszelkimi katastrofami",
+    },
+  };
+
+  if (!(selectedLanguage in lang)) {
+    return <div>Error: Selected language not supported</div>;
+  }
+
   return (
     <section id="tech">
       <div className="tech-wrapper">
         <div className="tech-contents">
           <div className="tech-info">
-            <h3 className="pre-heading">Techstack</h3>
+            <h3 className="pre-heading">{lang[selectedLanguage].tech} </h3>
             <h2 className="heading scroll-reveal shorter">
-              "Learning never exhausts the mind", therefore my aim is constant
-              improvement.
+              {lang[selectedLanguage].techHeading}
             </h2>
             <ul className="tech-grid">
               <li>
-                <p className="p-1">HTML5</p>
-                <p className="p-2">Astonishing responsive design</p>
+                <p className="p-1">{lang[selectedLanguage].html5}</p>
+                <p className="p-2">{lang[selectedLanguage].html5Desc}</p>
               </li>
               <li>
-                <p className="p-1">Javascript</p>
-                <p className="p-2">Turning coffee into code faster than Bolt</p>
+                <p className="p-1">{lang[selectedLanguage].javascript}</p>
+                <p className="p-2">{lang[selectedLanguage].javascriptDesc}</p>
               </li>
               <li>
-                <p className="p-1">SCSS</p>
-                <p className="p-2">
-                  Websites looking so good you just swipe right
-                </p>
+                <p className="p-1">{lang[selectedLanguage].scss}</p>
+                <p className="p-2">{lang[selectedLanguage].scssDesc}</p>
               </li>
               <li>
-                <p className="p-1">SEO</p>
-                <p className="p-2">
-                  I will make you disappear, from the bottom of Google
-                </p>
+                <p className="p-1">{lang[selectedLanguage].seo}</p>
+                <p className="p-2">{lang[selectedLanguage].seoDesc}</p>
               </li>
               <li className="copy">
-                <p className="p-1">Copy writing</p>
-                <p className="p-2">
-                  Writing copy, that increases users engagement (at least I
-                  think so)
-                </p>
+                <p className="p-1">{lang[selectedLanguage].copyWriting}</p>
+                <p className="p-2">{lang[selectedLanguage].copyWritingDesc}</p>
               </li>
               <li>
-                <p className="p-1">SEM</p>
-                <p className="p-2">
-                  Like my SEO's hotter sister, makes your ads pop and your
-                  clicks count
-                </p>
+                <p className="p-1">{lang[selectedLanguage].sem}</p>
+                <p className="p-2">{lang[selectedLanguage].semDesc}</p>
               </li>
               <li>
-                <p className="p-1">React</p>
-                <p className="p-2">UI's so responsive, they reply unasked</p>
+                <p className="p-1">{lang[selectedLanguage].react}</p>
+                <p className="p-2">{lang[selectedLanguage].reactDesc}</p>
               </li>
               <li>
-                <p className="p-1">Wordpress</p>
-                <p className="p-2">
-                  I used to take shortcuts and they were still beautiful
-                </p>
+                <p className="p-1">{lang[selectedLanguage].wordpress}</p>
+                <p className="p-2">{lang[selectedLanguage].wordpressDesc}</p>
               </li>
               <li>
-                <p className="p-1">Git</p>
-                <p className="p-2">Saves my code from any disasters</p>
+                <p className="p-1">{lang[selectedLanguage].git}</p>
+                <p className="p-2">{lang[selectedLanguage].gitDesc}</p>
               </li>
             </ul>
           </div>

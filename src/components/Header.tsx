@@ -51,7 +51,7 @@ function Header({ selectedLanguage, setSelectedLanguage }: Props) {
             {language[selectedLanguage].about}
           </span>
         </a>
-        <a className="hover-lift" href="#techstack">
+        <a className="hover-lift" href="#tech">
           <span className="hover-lift-deep">
             {language[selectedLanguage].tech}
           </span>
