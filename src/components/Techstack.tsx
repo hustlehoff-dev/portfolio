@@ -1,13 +1,27 @@
+import { useEffect, useState } from "react";
+
 interface Props {
   selectedLanguage: string;
 }
 
 const Techstack = ({ selectedLanguage }: Props) => {
+  // Class based on window width
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+  // Translations
   const lang: { [key: string]: { [key: string]: string } } = {
     en: {
       tech: "Techstack",
-      techHeading:
-        '"Learning never exhausts the mind", therefore my aim is constant improvement.',
+      techHeading: '"Trust the process."',
       html5: "HTML5",
       html5Desc: "Astonishing responsive design",
       javascript: "Javascript",
@@ -31,8 +45,7 @@ const Techstack = ({ selectedLanguage }: Props) => {
     },
     pl: {
       tech: "Technologie",
-      techHeading:
-        '"Proces nauki nigdy nie wyczerpuje umysłu." Moim celem jest ciągłe doskonalenie.',
+      techHeading: '"Ufaj procesowi."',
       html5: "HTML5",
       html5Desc: "Zachwycający responsywny design",
       javascript: "Javascript",
@@ -56,7 +69,6 @@ const Techstack = ({ selectedLanguage }: Props) => {
       gitDesc: "Ratuje mój kod przed wszelkimi katastrofami",
     },
   };
-
   if (!(selectedLanguage in lang)) {
     return <div>Error: Selected language not supported</div>;
   }
@@ -67,10 +79,7 @@ const Techstack = ({ selectedLanguage }: Props) => {
         <div className="tech-contents">
           <div className="tech-info">
             <h3 className="pre-heading">{lang[selectedLanguage].tech} </h3>
-            <h2 className="heading scroll-reveal shorter">
-              {lang[selectedLanguage].techHeading}
-            </h2>
-            <ul className="tech-grid">
+            <ul className={windowWidth > 800 ? "tech-grid-l" : "tech-grid"}>
               <li>
                 <p className="p-1">{lang[selectedLanguage].html5}</p>
                 <p className="p-2">{lang[selectedLanguage].html5Desc}</p>
@@ -108,6 +117,10 @@ const Techstack = ({ selectedLanguage }: Props) => {
                 <p className="p-2">{lang[selectedLanguage].gitDesc}</p>
               </li>
             </ul>
+
+            <h2 className="heading scroll-reveal shorter">
+              {lang[selectedLanguage].techHeading}
+            </h2>
           </div>
           <div className="tech-image">
             <img src="../../src/assets/about-me.jpg"></img>
