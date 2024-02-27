@@ -1,7 +1,13 @@
 function handleScroll() {
   const bgParallax = document.querySelector(".background-p");
   const scrollPosition = window.scrollY * 0.2;
-  bgParallax.style.backgroundPositionY = scrollPosition * -1 + "px";
+  if (window.innerWidth < window.innerHeight ) {
+    bgParallax.style.backgroundPositionY = scrollPosition * -1 + "px";
+  } else if (window.innerWidth > 2000 ) {
+    bgParallax.style.backgroundPositionY = -600 + scrollPosition * -1 + "px";
+  } else {
+    bgParallax.style.backgroundPositionY = -200 + scrollPosition * -1 + "px";
+  }
 }
 window.addEventListener("scroll", handleScroll);
 function logoHide() {

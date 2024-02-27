@@ -25,7 +25,6 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Mulish";
-  overflow-x: hidden;
 
   &:before {
     position: fixed;
@@ -705,6 +704,12 @@ footer {
   background-size: cover;
   background-position: 55%;
 
+  @media screen and (orientation: landscape) and (max-width: 1999px) {
+    background-position-y: -200px;
+  }
+  @media screen and (orientation: landscape) and (min-width: 2000px) {
+    background-position-y: -600px;
+  }
   &:before {
     content: "";
     position: absolute;
