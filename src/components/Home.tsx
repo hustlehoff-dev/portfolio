@@ -6,9 +6,9 @@ const Home = ({ selectedLanguage }: Props) => {
     <section id="home">
       <div className="home-wrapper background-p">
         <div className="home-contents">
-          <div className="home-front">
-            <h2>Adrian Kaczmarek</h2>
-            <h1 className="home-heading">
+          <div className="home-front ">
+            <h2 className="show-up-2">Adrian Kaczmarek</h2>
+            <h1 className="home-heading show-up">
               {selectedLanguage === "en" ? (
                 <>
                   Making <span>killer designs</span> since 2020
@@ -21,20 +21,6 @@ const Home = ({ selectedLanguage }: Props) => {
                 </>
               )}
             </h1>
-          </div>
-          <div className="header-socials-wrapper">
-            <a href="">
-              <img
-                src="../../src/assets/linkedin-icon.png"
-                alt="Linkedin Social Icon"
-              ></img>
-            </a>
-            <a href="">
-              <img
-                src="../../src/assets/github-icon.png"
-                alt="GitHub Social Icon"
-              ></img>
-            </a>
           </div>
         </div>
       </div>

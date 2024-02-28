@@ -21,6 +21,32 @@ function Header({ selectedLanguage, setSelectedLanguage }: Props) {
       polish: "Polski",
     },
   };
+  function highlightNavLink() {
+    const navLinks = document.querySelectorAll(".nav-link");
+    const sections = document.querySelectorAll("section");
+    let currentSection = "home";
+    sections.forEach((section) => {
+      if (
+        window.scrollY >= section.offsetTop &&
+        window.scrollY < section.offsetTop + section.offsetHeight
+      ) {
+        currentSection = section.id;
+        return;
+      }
+    });
+
+    navLinks.forEach((navLinkItem) => {
+      navLinkItem.classList.remove("active");
+    });
+
+    navLinks.forEach((navLinkItem) => {
+      if (navLinkItem.href.includes(currentSection)) {
+        navLinkItem.classList.add("active");
+      }
+    });
+  }
+  window.addEventListener("scroll", highlightNavLink);
+
   return (
     <header>
       <div className="header-logo">
@@ -33,9 +59,22 @@ function Header({ selectedLanguage, setSelectedLanguage }: Props) {
           </div>
         </a>
       </div>
-
+      <div className="header-socials-wrapper">
+        <a href="">
+          <img
+            src="../../src/assets/linkedin-icon.png"
+            alt="Linkedin Social Icon"
+          ></img>
+        </a>
+        <a href="">
+          <img
+            src="../../src/assets/github-icon.png"
+            alt="GitHub Social Icon"
+          ></img>
+        </a>
+      </div>
       <nav className="header-navigation">
-        <a className="hover-lift" href="#home">
+        <a className="nav-link hover-lift" href="#home">
           <span className="hover-lift-deep">
             {language[selectedLanguage].home}
           </span>
@@ -43,7 +82,7 @@ function Header({ selectedLanguage, setSelectedLanguage }: Props) {
             {language[selectedLanguage].home}
           </span>
         </a>
-        <a className="hover-lift" href="#about-me">
+        <a className="nav-link hover-lift" href="#about-me">
           <span className="hover-lift-deep">
             {language[selectedLanguage].about}
           </span>
@@ -51,7 +90,7 @@ function Header({ selectedLanguage, setSelectedLanguage }: Props) {
             {language[selectedLanguage].about}
           </span>
         </a>
-        <a className="hover-lift" href="#tech">
+        <a className="nav-link hover-lift" href="#tech">
           <span className="hover-lift-deep">
             {language[selectedLanguage].tech}
           </span>
@@ -59,7 +98,7 @@ function Header({ selectedLanguage, setSelectedLanguage }: Props) {
             {language[selectedLanguage].tech}
           </span>
         </a>
-        <a className="hover-lift" href="#contact">
+        <a className="nav-link hover-lift" href="#contact">
           <span className="hover-lift-deep">
             {language[selectedLanguage].contact}
           </span>

@@ -21,52 +21,52 @@ const Techstack = ({ selectedLanguage }: Props) => {
   const lang: { [key: string]: { [key: string]: string } } = {
     en: {
       tech: "Techstack",
-      techHeading: '"Trust the process."',
+      techHeading1: '"Learning never exhausts the mind." - Leonardo da Vinci',
       html5: "HTML5",
-      html5Desc: "Astonishing responsive design",
+      html5Desc: "Astonishing responsive design.",
       javascript: "Javascript",
-      javascriptDesc: "Turning coffee into code faster than Bolt",
+      javascriptDesc: "Turning coffee into code faster than Bolt.",
       scss: "SCSS",
-      scssDesc: "Websites looking so good you just swipe right",
+      scssDesc: "Websites looking so good you just swipe right.",
       seo: "SEO",
-      seoDesc: "I will make you disappear, from the bottom of Google",
+      seoDesc: "I will make you disappear, from the bottom of Google.",
       copyWriting: "Copywriting",
       copyWritingDesc:
-        "Writing copy, that increases users engagement (at least I think so)",
+        "Writing copy, that increases users engagement (at least I think so).",
       sem: "SEM",
       semDesc:
-        "Like my SEO's hotter sister, makes your ads pop and your clicks count",
+        "Like my SEO's hotter sister, makes your ads pop and your clicks count.",
       react: "React",
-      reactDesc: "UI's so responsive, they reply unasked",
+      reactDesc: "UI's so responsive, they reply unasked.",
       wordpress: "Wordpress",
-      wordpressDesc: "I used to take shortcuts and they were still beautiful",
+      wordpressDesc: "I used to take shortcuts and they were still beautiful.",
       git: "Git",
-      gitDesc: "Saves my code from any disasters",
+      gitDesc: "Saves my code from any disasters.",
     },
     pl: {
       tech: "Technologie",
-      techHeading: '"Ufaj procesowi."',
+      techHeading1: '"Nauka nigdy nie wyczerpuje umysłu." - Leonardo da Vinci',
       html5: "HTML5",
-      html5Desc: "Zachwycający responsywny design",
+      html5Desc: "Zachwycający responsywny design.",
       javascript: "Javascript",
-      javascriptDesc: "Przekształcam kawę w kod szybciej niż biega Bolt",
+      javascriptDesc: "Przekształcam kawę w kod szybciej niż biega Bolt.",
       scss: "SCSS",
-      scssDesc: "Strony wyglądają tak dobrze, że po prostu przesuwasz w prawo",
+      scssDesc: "Strony wyglądają tak dobrze, że po prostu przesuwasz w prawo.",
       seo: "SEO",
-      seoDesc: "Sprawię, że znikniesz z dna Google",
+      seoDesc: "Sprawię, że znikniesz z dna Google.",
       copyWriting: "Copywriting",
       copyWritingDesc:
-        "Piszę treści, które zwiększają zaangażowanie użytkowników (bez dyskusji)",
+        "Piszę treści, które zwiększają zaangażowanie użytkowników (bez dyskusji).",
       sem: "SEM",
       semDesc:
-        "Jak gorąca siostra mojego SEO, sprawia, że Twoje reklamy przyciągają uwagę, a kliknięcia się liczą",
+        "Jak gorąca siostra mojego SEO, sprawia, że Twoje reklamy przyciągają uwagę, a kliknięcia się liczą.",
       react: "React",
       reactDesc:
-        "Interfejsy użytkownika tak responsywne, że odpowiadają niepytane",
+        "Interfejsy użytkownika tak responsywne, że odpowiadają niepytane.",
       wordpress: "Wordpress",
-      wordpressDesc: "Kiedyś chodziłem na skróty, ale droga nadal była piękna",
+      wordpressDesc: "Kiedyś chodziłem na skróty, ale droga nadal była piękna.",
       git: "Git",
-      gitDesc: "Ratuje mój kod przed wszelkimi katastrofami",
+      gitDesc: "Ratuje mój kod przed wszelkimi katastrofami.",
     },
   };
   if (!(selectedLanguage in lang)) {
@@ -79,6 +79,9 @@ const Techstack = ({ selectedLanguage }: Props) => {
         <div className="tech-contents">
           <div className="tech-info">
             <h3 className="pre-heading">{lang[selectedLanguage].tech} </h3>
+            <h2 className="heading scroll-reveal shorter">
+              {lang[selectedLanguage].techHeading1}
+            </h2>
             <ul className={windowWidth > 800 ? "tech-grid-l" : "tech-grid"}>
               <li>
                 <p className="p-1">{lang[selectedLanguage].html5}</p>
@@ -117,10 +120,6 @@ const Techstack = ({ selectedLanguage }: Props) => {
                 <p className="p-2">{lang[selectedLanguage].gitDesc}</p>
               </li>
             </ul>
-
-            <h2 className="heading scroll-reveal shorter">
-              {lang[selectedLanguage].techHeading}
-            </h2>
           </div>
           <div className="tech-image">
             <img src="../../src/assets/about-me.jpg"></img>

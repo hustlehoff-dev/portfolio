@@ -4,12 +4,16 @@ interface Props {
 const Contact = ({ selectedLanguage }: Props) => {
   const lang: { [key: string]: { [key: string]: string } } = {
     en: {
+      techMotto: "My motto",
+      techHeading2: '"Trust the process."',
       contactPre: "Contact me",
       contactFull:
         "Let's talk about hiring, a project, collaboration or any idea you may have.",
       button: "Let's talk!",
     },
     pl: {
+      techMotto: "Moje motto",
+      techHeading2: '"Ufaj procesowi."',
       contactPre: "Kontakt",
       contactFull:
         "Porozmawiajmy o zatrudnieniu, projekcie, współpracy lub jakiejkolwiek innej pomysłowej koncepcji. ",
@@ -22,29 +26,41 @@ const Contact = ({ selectedLanguage }: Props) => {
   return (
     <section id="contact">
       <div className="contact-wrapper">
-        <div className="contact-contents">
-          <h3 className="pre-heading">{lang[selectedLanguage].contactPre} </h3>
-          <h2 className="heading scroll-reveal shorter">
-            {lang[selectedLanguage].contactFull}
+        <div className="motto-wrapper">
+          <div className="motto-background"></div>
+          <h3 className="pre-heading">{lang[selectedLanguage].techMotto} </h3>
+          <h2 className="heading scroll-reveal">
+            {lang[selectedLanguage].techHeading2}
           </h2>
         </div>
-        <div className="button-wrapper">
-          <a href="mailto:adrian.kaczmarek123@gmail.com" className="cta-button">
-            <span className="button-text">{lang[selectedLanguage].button}</span>
-            <div className="button-icon">
-              <div className="button-icon-bg"></div>
-              <svg
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="m7.012 18.069 9.702-9.702v7.298l1.499.028-.014-8.81-1.132-1.132-8.81-.014.028 1.499h7.298L5.88 16.937l1.131 1.132Z"
-                  fill="currentColor"
-                ></path>
-              </svg>
-            </div>
-          </a>
+        <div className="contact-contents">
+          <h3 className="pre-heading">{lang[selectedLanguage].contactPre} </h3>
+          <h2 className="heading scroll-reveal">
+            {lang[selectedLanguage].contactFull}
+          </h2>
+          <div className="button-wrapper">
+            <a
+              href="mailto:adrian.kaczmarek123@gmail.com"
+              className="cta-button"
+            >
+              <span className="button-text">
+                {lang[selectedLanguage].button}
+              </span>
+              <div className="button-icon">
+                <div className="button-icon-bg"></div>
+                <svg
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="m7.012 18.069 9.702-9.702v7.298l1.499.028-.014-8.81-1.132-1.132-8.81-.014.028 1.499h7.298L5.88 16.937l1.131 1.132Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     </section>
