@@ -40,7 +40,7 @@ function Header({ selectedLanguage, setSelectedLanguage }: Props) {
     });
 
     navLinks.forEach((navLinkItem) => {
-      if (navLinkItem.href.includes(currentSection)) {
+      if ((navLinkItem as HTMLAnchorElement).href.includes(currentSection)) {
         navLinkItem.classList.add("active");
       }
     });

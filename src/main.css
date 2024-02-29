@@ -229,6 +229,7 @@ a {
 
 .home-wrapper {
   height: 95vh;
+  overflow: hidden;
 }
 @media screen and (min-width: 800px) {
   .home-wrapper {
@@ -566,6 +567,9 @@ a {
   height: 50vh;
   width: 100%;
 }
+.motto-wrapper .scroll-reveal {
+  background-image: linear-gradient(270deg, #db1414, #db1414);
+}
 .motto-wrapper * {
   transform: translateY(-20%);
 }
@@ -577,7 +581,6 @@ a {
   background-repeat: no-repeat;
   background-size: 150%;
   background-position-x: 50%;
-  background-color: pink;
   background-image: url(../../src/assets/codeispoetry.jpg);
 }
 @media screen and (min-width: 1400px) {
@@ -777,21 +780,25 @@ footer {
   color: rgba(0, 0, 0, 0.1);
   background-image: linear-gradient(270deg, #555555, #555555);
   filter: saturate(150%);
-  -webkit-background-clip: text;
-          background-clip: text;
+  -webkit-background-clip: text; /* Prefix for background-clip */
+  background-clip: text;
   background-repeat: no-repeat;
-  background-size: 0% 100%;
+  background-size: 0% 100%; /* Prefix for animation */
   animation: scroll-reveal linear forwards;
+  -webkit-animation-timeline: view(); /* Prefix for animation-timeline */
   animation-timeline: view();
+  -webkit-animation-range: contain; /* Prefix for animation-range */
   animation-range: contain;
+  -webkit-animation-range-start: contain -20vh; /* Prefix for animation-range-start */
   animation-range-start: contain -20vh;
+  -webkit-animation-range-end: contain 20vh; /* Prefix for animation-range-end */
   animation-range-end: contain 20vh;
   display: inline;
 }
 .scroll-reveal.shorter {
-  animation-range-start: contain 0vh;
+  -webkit-animation-range-start: contain 0vh; /* Prefix for animation-range-start */
+  animation-range-start: contain 2vh;
 }
-
 @keyframes scroll-reveal {
   to {
     background-size: 100% 100%;

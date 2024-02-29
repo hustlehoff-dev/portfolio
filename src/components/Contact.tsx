@@ -29,7 +29,7 @@ const Contact = ({ selectedLanguage }: Props) => {
         <div className="motto-wrapper">
           <div className="motto-background"></div>
           <h3 className="pre-heading">{lang[selectedLanguage].techMotto} </h3>
-          <h2 className="heading scroll-reveal">
+          <h2 className="heading scroll-reveal shorter">
             {lang[selectedLanguage].techHeading2}
           </h2>
         </div>

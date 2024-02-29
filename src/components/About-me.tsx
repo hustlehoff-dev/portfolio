@@ -13,7 +13,7 @@ const Aboutme = ({ selectedLanguage }: Props) => {
                 <h3 className="pre-heading">About me</h3>
                 <h2 className="heading scroll-reveal">
                   I'm a <strong className="strong">highly passionate</strong>{" "}
-                  front-end dev with strong focus on delivering hiqh quality
+                  front-end dev with strong focus on delivering high quality
                   killer digital experience.
                 </h2>
               </div>

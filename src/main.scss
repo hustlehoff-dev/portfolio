@@ -4,10 +4,11 @@ $header-font: #111; //#a6a6a6
 $header-font-hover: #333333;
 
 $main-font: #333333;
-$main-light: #555555;
+
 $main-before: #e6e6e6;
-//$accent-font: crimson;
+
 $accent-color: #db1414; // hotter
+$main-light: #555555;
 // Dimensions
 $mobilemin: 360px;
 $mobile: 480px;
@@ -231,6 +232,7 @@ section {
 // Home section
 .home-wrapper {
   height: 95vh;
+  overflow: hidden;
   @media screen and (min-width: 800px) {
     padding: 0 64px;
   }
@@ -562,6 +564,9 @@ section {
   flex-direction: column;
   height: 50vh;
   width: 100%;
+  .scroll-reveal {
+    background-image: linear-gradient(270deg, $accent-color, $accent-color);
+  }
   * {
     transform: translateY(-20%);
   }
@@ -573,7 +578,6 @@ section {
     background-repeat: no-repeat;
     background-size: 150%;
     background-position-x: 50%;
-    background-color: pink;
 
     background-image: url(../../src/assets/codeispoetry.jpg);
     @media screen and (min-width: 1400px) {
@@ -593,6 +597,7 @@ section {
   .heading {
   }
 }
+
 // Contact section
 .contact-wrapper {
   display: flex;
@@ -790,24 +795,39 @@ footer {
   color: rgba(0, 0, 0, 0.1);
   background-image: linear-gradient(270deg, $main-light, $main-light);
   filter: saturate(150%);
+  -webkit-background-clip: text; /* Prefix for background-clip */
   background-clip: text;
   background-repeat: no-repeat;
   background-size: 0% 100%;
+  -webkit-animation: scroll-reveal linear forwards; /* Prefix for animation */
   animation: scroll-reveal linear forwards;
+  -webkit-animation-timeline: view(); /* Prefix for animation-timeline */
   animation-timeline: view();
+  -webkit-animation-range: contain; /* Prefix for animation-range */
   animation-range: contain;
+  -webkit-animation-range-start: contain -20vh; /* Prefix for animation-range-start */
   animation-range-start: contain -20vh;
+  -webkit-animation-range-end: contain 20vh; /* Prefix for animation-range-end */
   animation-range-end: contain 20vh;
   display: inline;
   &.shorter {
-    animation-range-start: contain 0vh;
+    -webkit-animation-range-start: contain 0vh; /* Prefix for animation-range-start */
+    animation-range-start: contain 2vh;
   }
 }
+
+@-webkit-keyframes scroll-reveal {
+  to {
+    background-size: 100% 100%;
+  }
+}
+
 @keyframes scroll-reveal {
   to {
     background-size: 100% 100%;
   }
 }
+
 // Class added to .strong class when element reaches half of window height
 .in-middle {
   color: $accent-color;
