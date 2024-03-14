@@ -60,13 +60,16 @@ function Header({ selectedLanguage, setSelectedLanguage }: Props) {
         </a>
       </div>
       <div className="header-socials-wrapper">
-        <a href="">
+        <a
+          href="https://www.linkedin.com/in/kaczmarek-adrian-pl/"
+          target="_blank"
+        >
           <img
             src="../../src/assets/linkedin-icon.png"
             alt="Linkedin Social Icon"
           ></img>
         </a>
-        <a href="">
+        <a href="https://github.com/hustlehoff-dev" target="_blank">
           <img
             src="../../src/assets/github-icon.png"
             alt="GitHub Social Icon"
