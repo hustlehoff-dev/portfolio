@@ -1,0 +1,73 @@
+@import "./../../variables.scss";
+
+.techstack-container {
+  display: flex;
+  flex-direction: column;
+
+  .techstack-sep {
+    text-align: center;
+  }
+  .techstack-wrapper {
+    display: flex;
+    width: 100%;
+
+    ul {
+      display: flex;
+      width: 100%;
+      justify-content: start;
+      flex-wrap: wrap;
+      gap: 1em;
+      li {
+        span {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+// @property syntax is not supported in all browsers yet, so check compatibility before using
+
+.techstack-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  z-index: 1;
+}
+@property --fill {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 0%;
+}
+.tech-icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  aspect-ratio: 1;
+  font-size: 1.5rem;
+  color: #7a7a7a;
+  background-color: $bg-secondary;
+  border-radius: 50%;
+  transition: color 0.5s ease-in-out;
+
+  &:hover {
+    color: greenyellow;
+    --fill: 100%;
+  }
+
+  &::after {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    inset: -4px;
+    border-radius: inherit;
+
+    background: conic-gradient($color5 var(--fill), transparent var(--fill));
+    transition: --fill 0.3s ease-in-out;
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "start": "Start",
+  "aboutme": "About me",
+  "projects": "Projects",
+  "contact": "Contact",
+
+  "heroHeading": "Adrian Kaczmarek",
+  "heroDesc": "Hi, I'm a self-taught, passionate React Front-end Developer based in Koszalin, Poland 🌊",
+
+  "techstack-sep": "Techstack",
+
+  "aboutmeHeading": "About Me",
+  "aboutmeDesc": "Hi, I'm Adrian, a self-taught React Front-end developer with a strong passion for creating exceptional user experiences. What started as a hobby has evolved into a dedicated pursuit of knowledge, as I continuously challenge myself to learn and grow. I thrive on the opportunity to work on projects that push me beyond my comfort zone, enabling me to expand my skill set and stay at the forefront of industry trends. With expertise in HTML5, CSS3, Sass, Typescript, React.js, and GraphQL, I am well-equipped to build visually appealing and interactive websites. My focus is not only on aesthetics but also on ensuring a smooth and responsive experience for users across different devices. I believe in the power of user-centric design and strive to create intuitive interfaces that enhance usability.",
+
+  "projectsHeading": "Projects",
+  "projectsDesc": "Every project is a unique piece of development 💻",
+
+  "contactHeading": "Contact Me",
+  "contactDesc": "Together, let's embark on new and exciting projects, where I can bring my dedication, enthusiasm, and passion for front-end development to create impactful digital experiences."
+}
