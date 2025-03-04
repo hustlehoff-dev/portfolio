@@ -2,16 +2,6 @@
 
 Welcome to the Portfolio project – a modern, stylish, and futuristic showcase built with React, Three.js, and Vite. This project is designed to highlight innovative design with 3D interactive elements, sleek animations, and a cutting-edge tech stack.
 
-## Table of Contents
-
-- [Tech Stack](#tech-stack)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Scripts](#scripts)
-- [Dependencies](#dependencies)
-- [Dev Dependencies](#dev-dependencies)
-- [License](#license)
-
 ## Tech Stack
 
 - **React** – UI Library
