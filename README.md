@@ -18,3 +18,6 @@ Welcome to the Portfolio project – a modern, stylish, and futuristic showcase 
 ## Custom Language Management
 
 This project features a custom-built language management system, implemented from scratch to handle translations between English and Polish. It leverages React Context API and local storage for persistence.
+
+Usage:
+`js // const { t } = useLanguage(); `
