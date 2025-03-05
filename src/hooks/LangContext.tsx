@@ -16,7 +16,7 @@ const LanguageContext = createContext<LanguageContextType | undefined>(
 );
 
 interface Translations {
-  [key: string]: string;
+  [key: string]: any;
 }
 const translations: Record<Language, Translations> = { en, pl };
 
@@ -42,7 +42,17 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
     localStorage.setItem("language", language);
   }, [language]);
 
-  const t = (key: string) => translations[language][key] || key;
+  const t = (key: string) => {
+    const keys = key.split(".");
+    let result: any = translations[language];
+
+    for (const k of keys) {
+      result = result?.[k];
+      if (result === undefined) return key;
+    }
+
+    return result;
+  };
 
   return (
     <LanguageContext.Provider

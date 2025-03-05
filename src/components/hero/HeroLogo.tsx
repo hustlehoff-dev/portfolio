@@ -9,8 +9,8 @@ const Logo3D = () => {
   const targetRotation = useRef({ x: -0.3, y: 0.4 });
 
   const handleMouseMove = (event: MouseEvent) => {
-    const x = (event.clientX / window.innerWidth - 0.35) * 2;
-    const y = (event.clientY / window.innerHeight - 0.5) * 2;
+    const x = (event.clientX / window.innerWidth - 0.35) * 1;
+    const y = (event.clientY / window.innerHeight - 0.5) * 1;
 
     targetRotation.current.x = y * 1;
     targetRotation.current.y = x * 1;
@@ -37,7 +37,7 @@ const Logo3D = () => {
     }
   });
 
-  return <primitive object={scene} ref={logoRef} scale={5} />;
+  return <primitive object={scene} ref={logoRef} scale={8} />;
 };
 
 const HeroLogo = () => {

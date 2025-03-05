@@ -1,51 +1,68 @@
-import React from "react";
 import { useLanguage } from "./../../hooks/LangContext";
 import { motion } from "framer-motion";
-
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+import GitHubIcon from "@mui/icons-material/GitHub";
 interface Project {
   title: string;
   demoLink: string;
   githubLink: string | undefined;
   screenshot: string;
-  description: JSX.Element;
+  description: any;
   technologies: string[];
 }
+const comeincryptoSS = "./comeincryptomobile.png";
 
 const ProjectItems = () => {
   const { t } = useLanguage();
 
   const projectList: Project[] = [
     {
-      title: "Tom-Rys",
-      demoLink: "https://tom-rys.pl/",
-      githubLink: undefined,
-      screenshot: tomRysScreenshot,
+      title: "ComeInCrypto Mobile WebApp",
+      demoLink: "https://melodic-gelato-66855f.netlify.app/",
+      githubLink: "https://github.com/hustlehoff-dev/blog-react-headlesswp",
+      screenshot: comeincryptoSS,
+      description: <>{t("projects.crypto.description")}</>,
+      technologies: ["React.js", "TypeScript", "API", "Sass"],
+    },
+    {
+      title: "ComeInCrypto Mobile WebApp",
+      demoLink: "https://melodic-gelato-66855f.netlify.app/",
+      githubLink: "https://github.com/hustlehoff-dev/blog-react-headlesswp",
+      screenshot: comeincryptoSS,
       description: <>{t("Projects.tomRys.description")}</>,
       technologies: ["HTML", "CSS", "JavaScript"],
     },
     {
-      title: "Tropicar",
-      demoLink: "https://tropicar.netlify.app/",
-      githubLink: "https://github.com/ppuhacz/tropicar",
-      screenshot: tropicarScreenshot,
-      description: <>{t("Projects.tropicar.description")}</>,
-      technologies: ["React.js", "TypeScript", "Airtable", "Sass"],
+      title: "ComeInCrypto Mobile WebApp",
+      demoLink: "https://melodic-gelato-66855f.netlify.app/",
+      githubLink: "https://github.com/hustlehoff-dev/blog-react-headlesswp",
+      screenshot: comeincryptoSS,
+      description: <>{t("Projects.tomRys.description")}</>,
+      technologies: ["HTML", "CSS", "JavaScript"],
     },
     {
-      title: "Onely blog clone",
-      demoLink: "https://calm-parfait-2f27b9.netlify.app/",
-      githubLink: "https://github.com/ppuhacz/onely-blog-clone-typescript",
-      screenshot: onelyScreenshot,
-      description: <>{t("Projects.onely.description")}</>,
-      technologies: ["React.js", "Angular", "TypeScript", "GraphQL", "Sass"],
+      title: "ComeInCrypto Mobile WebApp",
+      demoLink: "https://melodic-gelato-66855f.netlify.app/",
+      githubLink: "https://github.com/hustlehoff-dev/blog-react-headlesswp",
+      screenshot: comeincryptoSS,
+      description: <>{t("Projects.tomRys.description")}</>,
+      technologies: ["HTML", "CSS", "JavaScript"],
     },
     {
-      title: "Country data",
-      demoLink: "https://voluble-dasik-379a8b.netlify.app/",
-      githubLink: "https://github.com/ppuhacz/country-data",
-      screenshot: countryDataScreenshot,
-      description: <>{t("Projects.countryData.description")}</>,
-      technologies: ["React.js", "CSS3", "Axios"],
+      title: "ComeInCrypto Mobile WebApp",
+      demoLink: "https://melodic-gelato-66855f.netlify.app/",
+      githubLink: "https://github.com/hustlehoff-dev/blog-react-headlesswp",
+      screenshot: comeincryptoSS,
+      description: <>{t("Projects.tomRys.description")}</>,
+      technologies: ["HTML", "CSS", "JavaScript"],
+    },
+    {
+      title: "ComeInCrypto Mobile WebApp",
+      demoLink: "https://melodic-gelato-66855f.netlify.app/",
+      githubLink: "https://github.com/hustlehoff-dev/blog-react-headlesswp",
+      screenshot: comeincryptoSS,
+      description: <>{t("Projects.tomRys.description")}</>,
+      technologies: ["HTML", "CSS", "JavaScript"],
     },
   ];
 
@@ -61,15 +78,7 @@ const ProjectItems = () => {
 
     return (
       <div className="project-wrapper" key={`project-${title}`}>
-        <div className="project-black-line"></div>
         <div className="project-info">
-          <motion.div
-            className="project-vertical-line"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1, delay: 0.2 }}
-          />
           <motion.div
             className="project-info-description"
             initial={{ x: 20, opacity: 0 }}
@@ -93,24 +102,15 @@ const ProjectItems = () => {
                 <h3>{title.toLocaleUpperCase()}</h3>
               </a>
               <p>{description}</p>
-              <h4>{t("Projects.technologies")}</h4>
-              <ul className="project-technologies-list">
-                {technologies.map((tech) => (
-                  <li key={tech}>{tech}</li>
-                ))}
-              </ul>
+
               <span>
                 <a
                   href={demoLink}
                   target="_blank"
                   rel="noreferrer noopener"
                   className="project-link">
-                  <img
-                    src={newWindow}
-                    alt="open project in new window"
-                    height={20}
-                  />
-                  {t("Projects.demo")}
+                  <OpenInNewIcon />
+                  {t("projects.demo")}
                 </a>
                 {githubLink && (
                   <a
@@ -118,11 +118,17 @@ const ProjectItems = () => {
                     target="_blank"
                     rel="noreferrer noopener"
                     className="project-link">
-                    <img src={githubIcon} height={20} alt="Github icon" />
-                    {t("Projects.code")}
+                    <GitHubIcon />
+                    {t("projects.code")}
                   </a>
                 )}
               </span>
+              {/*<h4>{t("projects.technologies")}</h4>*/}
+              <ul className="project-technologies-list">
+                {technologies.map((tech) => (
+                  <li key={tech}>{tech}</li>
+                ))}
+              </ul>
             </div>
           </motion.div>
         </div>

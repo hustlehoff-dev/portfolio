@@ -1,1 +1,142 @@
 @import "./../../variables.scss";
+
+.projects-container {
+  width: $mobilePageWidth;
+  margin: auto;
+  padding: 50px 0;
+}
+
+.projects-wrapper {
+  .projects-title {
+    text-align: center;
+    h2 {
+      font-size: 1.5em;
+      margin-bottom: 0.25em;
+      @media screen and (min-width: $small) {
+        font-size: 1.8em;
+      }
+    }
+    p {
+      font-size: 1em;
+      @media screen and (min-width: $small) {
+        font-size: 1.2em;
+      }
+    }
+  }
+
+  .project-list-container {
+    margin-top: 1em;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2em;
+    align-items: stretch;
+
+    @media screen and (min-width: $small) {
+      gap: 1em;
+    }
+  }
+}
+
+.project-wrapper {
+  position: relative;
+  border: 1px solid #444;
+  border-radius: 20px;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+
+  .project-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .project-info-description {
+      flex-grow: 1;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+
+      .project-info-photo {
+        margin-bottom: 0.5em;
+        width: 100%;
+        .project-screenshot {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+          object-position: top;
+          transition: object-position 4.2s ease-in-out;
+          border-radius: 16px;
+          &:hover {
+            object-position: bottom;
+          }
+          @media screen and (min-width: $small) {
+            height: 300px;
+          }
+        }
+      }
+
+      .project-info-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-grow: 1;
+
+        min-height: 0;
+
+        h3 {
+          margin-bottom: 0.5em;
+          padding: 0 0.5em;
+          font-size: 1.2em;
+          @media screen and (min-width: $small) {
+            font-size: 1.35em;
+          }
+        }
+
+        p {
+          margin-bottom: 0.25em;
+          text-align: justify;
+          padding: 0 0.5em;
+          opacity: 0.5;
+          font-size: 0.85em;
+          flex-grow: 1;
+
+          @media screen and (min-width: $small) {
+            font-size: 1em;
+          }
+        }
+
+        span {
+          display: flex;
+          justify-content: start;
+          gap: 0.5em;
+          padding: 1em 0 0.5em 0;
+        }
+
+        .project-technologies-list {
+          border-top: 1px solid $bg-secondary;
+          padding-top: 0.5em;
+          display: flex;
+          gap: 0.25em;
+          flex-wrap: wrap;
+          margin-top: auto;
+
+          li {
+            border: 1px solid $bg-third;
+            border-radius: 8px;
+            width: max-content;
+            height: max-content;
+            padding: 0.25em 0.5em;
+            font-size: 0.85em;
+
+            @media screen and (min-width: $small) {
+              font-size: 1em;
+            }
+          }
+        }
+      }
+    }
+  }
+}

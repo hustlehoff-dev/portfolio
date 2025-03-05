@@ -1,0 +1,23 @@
+@import "./../../variables.scss";
+
+.footer-container {
+}
+.footer-wrapper {
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    opacity: 0.5;
+    font-size: 0.85em;
+  }
+  border-top: 1px solid $bg-third;
+
+  @media screen and (min-width: $medium) {
+    p {
+      font-size: 1em;
+    }
+    padding: 1.5em;
+  }
+}

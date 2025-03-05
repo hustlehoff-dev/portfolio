@@ -3,6 +3,8 @@
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
+  transition: 0.25s;
+  box-sizing: border-box;
 }
 :root {
   background: $bg;
@@ -23,4 +25,38 @@ a {
 }
 ul {
   list-style-type: none;
+}
+button {
+  cursor: pointer;
+}
+section {
+  div {
+    margin: auto;
+    div {
+      max-width: 1200px;
+    }
+  }
+}
+h1,
+h2,
+h3 {
+  filter: drop-shadow(1px 1px 1px $bg);
+  background: linear-gradient(
+    to right,
+    #ff728e,
+    #8f68ff,
+    $color5,
+    #8f68ff,
+    #ff728e
+  );
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate-gradient 2.5s linear infinite;
+  @keyframes animate-gradient {
+    to {
+      background-position: 200%;
+    }
+  }
 }

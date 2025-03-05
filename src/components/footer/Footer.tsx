@@ -1,10 +1,12 @@
 import React from "react";
-
+import "./footer.scss";
+import { useLanguage } from "./../../hooks/LangContext";
 const Footer = () => {
+  const { t } = useLanguage();
   return (
-    <footer>
-      <div className="container">
-        <p>&copy; 2025 Your Company. All rights reserved.</p>
+    <footer className="footer-container">
+      <div className="footer-wrapper">
+        <p>&copy; {t("footer.copyright")}</p>
       </div>
     </footer>
   );

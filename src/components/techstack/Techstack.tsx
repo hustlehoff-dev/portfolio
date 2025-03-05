@@ -25,7 +25,7 @@ const TechStack = () => {
           <ul className="techstack-icons">
             {techStack.map((tech, index) => (
               <li key={index} className={`tech-icon ${tech}`}>
-                <TechIcon name={tech} style={{ width: "38px" }} />
+                <TechIcon name={tech} style={{ width: "60%" }} />
               </li>
             ))}
           </ul>

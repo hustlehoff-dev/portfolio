@@ -1,20 +1,52 @@
 {
-  "start": "Start",
-  "aboutme": "About me",
-  "projects": "Projects",
-  "contact": "Contact",
+  "navigation": {
+    "start": "Start",
+    "aboutme": "About me",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
 
-  "heroHeading": "Adrian Kaczmarek",
-  "heroDesc": "Hi, I'm a self-taught, passionate React Front-end Developer based in Koszalin, Poland 🌊",
+  "hero": {
+    "heading": "Adrian Kaczmarek",
+    "description": "Hi, I'm a self-taught, passionate React Front-end Developer based in Koszalin, Poland 🌊"
+  },
 
-  "techstack-sep": "Techstack",
+  "techstack": {
+    "separator": "Techstack"
+  },
 
-  "aboutmeHeading": "About Me",
-  "aboutmeDesc": "Hi, I'm Adrian, a self-taught React Front-end developer with a strong passion for creating exceptional user experiences. What started as a hobby has evolved into a dedicated pursuit of knowledge, as I continuously challenge myself to learn and grow. I thrive on the opportunity to work on projects that push me beyond my comfort zone, enabling me to expand my skill set and stay at the forefront of industry trends. With expertise in HTML5, CSS3, Sass, Typescript, React.js, and GraphQL, I am well-equipped to build visually appealing and interactive websites. My focus is not only on aesthetics but also on ensuring a smooth and responsive experience for users across different devices. I believe in the power of user-centric design and strive to create intuitive interfaces that enhance usability.",
+  "aboutme": {
+    "heading": "About Me",
+    "description": {
+      "part1": "Hi, I'm Adrian, a self-taught React Front-end developer with a strong passion for creating exceptional user experiences.",
+      "part2": "What started as a hobby has evolved into a dedicated pursuit of knowledge, as I continuously challenge myself to learn and grow. I thrive on the opportunity to work on projects that push me beyond my comfort zone, enabling me to expand my skill set and stay at the forefront of industry trends.",
+      "part3": "With expertise in HTML5, CSS3, Sass, Typescript, React.js, and GraphQL, I am well-equipped to build visually appealing and interactive websites. My focus is not only on aesthetics but also on ensuring a smooth and responsive experience for users across different devices.",
+      "part4": "I believe in the power of user-centric design and strive to create intuitive interfaces that enhance usability."
+    }
+  },
 
-  "projectsHeading": "Projects",
-  "projectsDesc": "Every project is a unique piece of development 💻",
+  "projects": {
+    "heading": "Projects",
+    "technologies": "Technologies used:",
+    "demo": "Live Demo",
+    "code": "Code",
+    "description": "Every project is a unique piece of development 💻",
 
-  "contactHeading": "Contact Me",
-  "contactDesc": "Together, let's embark on new and exciting projects, where I can bring my dedication, enthusiasm, and passion for front-end development to create impactful digital experiences."
+    "crypto": {
+      "description": "React-based cryptocurrency blog with WordPress as a headless CMS. It features real-time crypto data from Coingecko, infinite scrolling, SEO optimization, and a fully responsive design."
+    }
+  },
+
+  "contact": {
+    "heading": "Contact Me",
+    "description": "Together, let's embark on new and exciting projects, where I can bring my dedication, enthusiasm, and passion for front-end development to create impactful digital experiences."
+  },
+
+  "footer": {
+    "copyright": "2025 Adrian Kaczmarek. All rights reserved."
+  },
+
+  "test": {
+    "shit": "shit"
+  }
 }

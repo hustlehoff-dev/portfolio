@@ -1,4 +1,3 @@
-import {} from "react";
 import { useLanguage } from "./../../hooks/LangContext";
 import "./header.scss";
 import useIsMobile from "../../hooks/is-mobile";
@@ -8,7 +7,13 @@ const Header = () => {
   const { t, changeLanguage, language } = useLanguage();
   const isMobile = useIsMobile();
 
-  const links = ["start", "aboutme", "projects", "contact"];
+  const links = [
+    "navigation.start",
+    "navigation.aboutme",
+    "navigation.projects",
+    "navigation.contact",
+  ];
+
   return (
     <header className="nav-wrapper">
       <nav className="app-navigation" id="site-navigation">
@@ -30,21 +35,22 @@ const Header = () => {
           id="primary-menu"
           className={`${isMobile ? "menu-mobile" : "menu-desktop"}`}>
           {links.map((link, index) => (
-            <li key={index}>
-              <a
-                className="hover-underline-anim left nav-link"
-                href={"#" + link}>
-                {t(link)}
-              </a>
-            </li>
+            <a key={index} className="" href={"#" + link}>
+              <li>{t(link)}</li>
+            </a>
           ))}
-          <select
-            value={language}
-            onChange={(e) => changeLanguage(e.target.value)}
-            className="language-dropdown">
-            <option value="en">English</option>
-            <option value="pl">Polski</option>
-          </select>
+          <div className="language-buttons">
+            <button
+              onClick={() => changeLanguage("en")}
+              className={`language-btn ${language === "en" ? "active" : ""}`}>
+              English
+            </button>
+            <button
+              onClick={() => changeLanguage("pl")}
+              className={`language-btn ${language === "pl" ? "active" : ""}`}>
+              Polski
+            </button>
+          </div>
         </ul>
       </nav>
     </header>

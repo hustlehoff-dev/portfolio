@@ -1,10 +1,7 @@
-import React from "react";
 import "./hero.scss";
 import hero from "./../../assets/hero.webp";
 import TechStack from "../techstack/Techstack";
-import HeroBackground from "./HeroBackground";
 import HeroLogo from "./HeroLogo";
-import { Canvas } from "@react-three/fiber";
 import { useLanguage } from "./../../hooks/LangContext";
 const Hero = () => {
   const { t } = useLanguage();
@@ -13,8 +10,8 @@ const Hero = () => {
       <div className="hero-container">
         <header className="hero-wrapper">
           <div className="hero-content">
-            <h1 className="hero-heading">{t("heroHeading")}</h1>
-            <p className="hero-desc">{t("heroDesc")}</p>
+            <h1 className="hero-heading">{t("hero.heading")}</h1>
+            <p className="hero-desc">{t("hero.description")}</p>
             <TechStack />
           </div>
           <div className="hero-sphere">

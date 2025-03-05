@@ -11,56 +11,84 @@
 .hero-wrapper {
   position: relative;
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+
+  flex-direction: column;
+
+  canvas {
+    opacity: 0;
+    animation: opacityModel 1s forwards;
+    animation-delay: 1.2s;
+    @keyframes opacityModel {
+      to {
+        opacity: 1;
+      }
+    }
+  }
 }
 
 .hero-content {
   position: relative;
   z-index: 5;
-  width: 35%;
-  //text-align: center;
+  width: 90%;
+  order: 1;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 0.25em;
 
   .hero-heading {
-    font-size: 4em;
-    margin-bottom: 0.5em;
-    filter: drop-shadow(1px 1px 1px $bg);
-    background: linear-gradient(
-      to right,
-      #ff728e,
-      #8f68ff,
-      $color5,
-      #8f68ff,
-      #ff728e
-    );
-    background-size: 200%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: animate-gradient 2.5s linear infinite;
-    @keyframes animate-gradient {
-      to {
-        background-position: 200%;
-      }
+    font-size: 2em;
+    margin-bottom: 0.15em;
+    @media screen and (min-width: $small) {
+      font-size: 2.5em;
+      margin-bottom: 0.5em;
+    }
+    @media screen and (min-width: $medium) {
+      font-size: 4.2em;
     }
   }
 
   .hero-desc {
-    font-size: 1.8em;
     color: $font-color;
     text-shadow: 1px 1px 3px $bg;
-    margin-bottom: 1em;
+    font-size: 1em;
+    margin-bottom: 0.5em;
+    @media screen and (min-width: $small) {
+      font-size: 1.4em;
+      margin-bottom: 1em;
+    }
+    @media screen and (min-width: $medium) {
+      font-size: 1.8em;
+    }
+  }
+  @media screen and (min-width: $medium) {
+    margin: 0 auto;
+    transform: translateY(-6em);
   }
 }
 /* KULAAA */
 
 .hero-sphere {
   z-index: 5;
-  width: 50%;
-  height: 100%;
+  order: 0;
+  width: 100%;
+  height: 50%;
+  padding-top: 1em;
+  @media screen and (min-width: $small) {
+    height: 100%;
+    max-height: 500px;
+  }
+  @media screen and (min-width: $medium) {
+    max-height: 70%;
+    padding-top: 0;
+    margin: 0;
+  }
 }
 
 /* Figure bg */

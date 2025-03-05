@@ -1,15 +1,20 @@
-$bg: #121212;
-$bg-secondary: #313131;
-$font-color: #f2f2f2;
+$small: 430px;
+$medium: 768px;
+$big: 1280px;
 
+$bg: #000;
+$bg-secondary: #121212;
+$bg-third: #32353d;
+$font-color: #f2f2f2;
+$border: #444;
 $borderRadiusLoader: 20px;
 
 $burger-width: 50px;
-$burger-line-width: 30px;
-$burger-line-height: 3px;
-$burger-gap: 5px;
+$burger-line-width: 20px;
+$burger-line-height: 2px;
+$burger-gap: 6px;
 $menu-bg: white;
-$menu-width: 20em;
+$menu-width: 80vw;
 
 $color1: #a020f0;
 $color2: #7a0bc0;
@@ -28,3 +33,6 @@ $gradient4: linear-gradient(45deg, #ffd700, #a67c00);
 $gradient5: linear-gradient(45deg, #39ff14, #135c13);
 
 $animation-delay: 1s;
+
+$mobilePageWidth: 81vw;
+$desktopPageWidth: 80vw;

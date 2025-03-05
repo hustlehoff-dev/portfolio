@@ -1,15 +1,18 @@
-import React from "react";
 import "./contact.scss";
+import EmailIcon from "@mui/icons-material/Email";
+
 import { useLanguage } from "./../../hooks/LangContext";
 const Contact = () => {
   const { t } = useLanguage();
   return (
     <section id="contact" className="contact-container">
       <div className="contact-wrapper">
-        <h2>{t("contactHeading")}</h2>
-        <p>{t("contactDesc")}</p>
+        <div className="contact-content">
+          <h2>{t("contact.heading")}</h2>
+          <p>{t("contact.description")}</p>
+        </div>
         <a href="mailto:contact@example.com" className="email-link">
-          contact@example.com
+          <EmailIcon /> kaczmarek.adrian.lead@gmail.com
         </a>
       </div>
     </section>
