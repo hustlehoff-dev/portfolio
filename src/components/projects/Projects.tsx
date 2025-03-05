@@ -5,7 +5,7 @@ import ProjectItems from "./Project";
 const Projects = () => {
   const { t } = useLanguage();
   return (
-    <section id="projects" className="projects-container">
+    <section id="navigation.projects" className="projects-container">
       <div className="projects-wrapper">
         <div className="projects-title">
           <h2>{t("projects.heading")}</h2>

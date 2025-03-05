@@ -3,7 +3,7 @@ import { useLanguage } from "./../../hooks/LangContext";
 const Aboutme = () => {
   const { t } = useLanguage();
   return (
-    <section id="aboutme" className="about">
+    <section id="navigation.aboutme" className="about">
       <div className="aboutme-container">
         <div className="aboutme-wrapper">
           <div className="aboutme-image">

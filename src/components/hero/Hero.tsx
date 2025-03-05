@@ -6,7 +6,7 @@ import { useLanguage } from "./../../hooks/LangContext";
 const Hero = () => {
   const { t } = useLanguage();
   return (
-    <section id="start" className="hero">
+    <section id="navigation.start" className="hero">
       <div className="hero-container">
         <header className="hero-wrapper">
           <div className="hero-content">

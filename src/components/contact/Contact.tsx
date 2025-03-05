@@ -5,7 +5,7 @@ import { useLanguage } from "./../../hooks/LangContext";
 const Contact = () => {
   const { t } = useLanguage();
   return (
-    <section id="contact" className="contact-container">
+    <section id="navigation.contact" className="contact-container">
       <div className="contact-wrapper">
         <div className="contact-content">
           <h2>{t("contact.heading")}</h2>
