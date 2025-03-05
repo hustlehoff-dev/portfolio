@@ -1,9 +1,7 @@
 import "./techstack.scss";
 import TechIcon from "tech-stack-icons";
-import { useLanguage } from "./../../hooks/LangContext";
 
 const TechStack = () => {
-  const { t } = useLanguage();
   const techStack = [
     "reactjs",
     "nextjs",

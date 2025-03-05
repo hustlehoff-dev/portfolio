@@ -1,4 +1,3 @@
-import React from "react";
 import "./footer.scss";
 import { useLanguage } from "./../../hooks/LangContext";
 const Footer = () => {

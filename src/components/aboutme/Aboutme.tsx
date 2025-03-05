@@ -1,4 +1,3 @@
-import React from "react";
 import "./aboutme.scss";
 import { useLanguage } from "./../../hooks/LangContext";
 const Aboutme = () => {

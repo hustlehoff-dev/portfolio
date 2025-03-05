@@ -48,4 +48,5 @@ moze to.txt
 index.html
 eslint.config.js
 /things
+/dist
 

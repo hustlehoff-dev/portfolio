@@ -1,4 +1,3 @@
-import React from "react";
 import "./App.scss";
 import Loader from "./components/loader/Loader";
 import Header from "./components/header/Header";
@@ -10,7 +9,7 @@ import Footer from "./components/footer/Footer";
 const App = () => {
   return (
     <>
-      {/*<Loader /> */}
+      <Loader />
       <Header />
       <main>
         <Hero />

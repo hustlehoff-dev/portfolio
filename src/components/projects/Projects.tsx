@@ -1,4 +1,3 @@
-import React from "react";
 import "./projects.scss";
 import { useLanguage } from "./../../hooks/LangContext";
 import ProjectItems from "./Project";
