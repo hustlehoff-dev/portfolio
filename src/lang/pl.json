@@ -1,8 +1,52 @@
 {
-  "start": "Start",
-  "aboutme": "O mnie",
-  "projects": "Projekty",
-  "contact": "Kontakt",
+  "navigation": {
+    "start": "Start",
+    "aboutme": "O mnie",
+    "projects": "Projekty",
+    "contact": "Kontakt"
+  },
 
-  "techstack-sep": "Stos technologiczny"
+  "hero": {
+    "heading": "Adrian Kaczmarek",
+    "description": "Cześć, jestem samoukiem React, z pasji Front-end Developer z Koszalina, Polski 🌊"
+  },
+
+  "techstack": {
+    "separator": "Technologie"
+  },
+
+  "aboutme": {
+    "heading": "O mnie",
+    "description": {
+      "part1": "Cześć, jestem Adrian, samoukiem React Front-end Developerem z wielką pasją do tworzenia wyjątkowych doświadczeń użytkowników.",
+      "part2": "To, co zaczęło się jako hobby, przerodziło się w pełne poświęcenie w zdobywaniu wiedzy, ponieważ nieustannie dążę się do nauki i rozwoju. Czerpię radość z pracy nad projektami, które wykraczają poza moją strefę komfortu, co pozwala mi poszerzać swoje umiejętności i być na bieżąco z trendami branżowymi.",
+      "part3": "Dzięki doświadczeniu w HTML5, CSS3, Sass, Typescript, React.js i GraphQL, jestem dobrze przygotowany, aby tworzyć wizualnie atrakcyjne i interaktywne strony internetowe. Moim celem nie jest tylko estetyka, ale również zapewnienie płynnego i responsywnego doświadczenia użytkowników na różnych urządzeniach.",
+      "part4": "Wierzę w siłę projektowania zorientowanego na użytkownika i staram się tworzyć intuicyjne interfejsy, które poprawiają użyteczność."
+    }
+  },
+
+  "projects": {
+    "heading": "Projekty",
+    "technologies": "Użyte technologie:",
+    "demo": "Demo na żywo",
+    "code": "Kod",
+    "description": "Każdy projekt to unikalny kawałek rozwoju 💻",
+
+    "crypto": {
+      "description": "Blog o kryptowalutach oparty na React, z WordPress jako headless CMS. Zawiera dane o kryptowalutach w czasie rzeczywistym z Coingecko, nieskończone przewijanie, optymalizację SEO oraz w pełni responsywny design."
+    }
+  },
+
+  "contact": {
+    "heading": "Skontaktuj się ze mną",
+    "description": "Razem rozpocznijmy nowe i ekscytujące projekty, w których mogę wnieść moją dedykację, entuzjazm i pasję do front-end developmentu, aby tworzyć wpływowe cyfrowe doświadczenia."
+  },
+
+  "footer": {
+    "copyright": "2025 Adrian Kaczmarek. Wszelkie prawa zastrzeżone."
+  },
+
+  "test": {
+    "essa": "zatrudnij mnie proszę jestem bardzo wartościowy"
+  }
 }
