@@ -113,6 +113,37 @@
           justify-content: start;
           gap: 0.5em;
           padding: 1em 0 0.5em 0;
+          a {
+            display: flex;
+            align-items: center;
+            gap: 0.25em;
+            color: #777;
+            font-weight: 800;
+            &:hover {
+              svg {
+                color: #f6f6f6;
+              }
+              background: linear-gradient(
+                to right,
+                #ff728e,
+                #8f68ff,
+                $color5,
+                #8f68ff,
+                #ff728e
+              );
+              background-size: 200%;
+              background-clip: text;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              animation: animate-gradient 2.5s linear infinite;
+
+              @keyframes animate-gradient {
+                to {
+                  background-position: 200%;
+                }
+              }
+            }
+          }
         }
 
         .project-technologies-list {
