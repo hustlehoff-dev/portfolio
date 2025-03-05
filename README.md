@@ -2,6 +2,9 @@
 
 Welcome to the Portfolio project – a modern, stylish, and futuristic showcase built with React, Three.js, and Vite. This project is designed to highlight innovative design with 3D interactive elements, sleek animations, and a cutting-edge tech stack.
 
+LIVE:
+https://adriankaczmarek.netlify.app/
+
 ## Tech Stack
 
 - **React** – UI Library
