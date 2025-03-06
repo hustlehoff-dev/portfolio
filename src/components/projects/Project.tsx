@@ -23,7 +23,7 @@ const ProjectItems = () => {
       githubLink: "https://github.com/hustlehoff-dev/blog-react-headlesswp",
       screenshot: comeincryptoSS,
       description: <>{t("projects.crypto.description")}</>,
-      technologies: ["React.js", "TypeScript", "API", "Sass"],
+      technologies: ["React.js", "TypeScript", "API", "Sass", "HeadlessCMS"],
     },
     {
       title: "EssaBarber Appointment MApp",
