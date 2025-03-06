@@ -39,7 +39,14 @@ const ProjectItems = () => {
       githubLink: "",
       screenshot: placeholder,
       description: <>{t("projects.placeholder.description")}</>,
-      technologies: ["NextJS", "TypeScript", "GraphQL", "HeadlessCMS", "Sass"],
+      technologies: [
+        "NextJS",
+        "TypeScript",
+        "GraphQL",
+        "HeadlessCMS",
+        "Sass",
+        "SSR",
+      ],
     },
     {
       title: "Coming in a few days! Really.",
