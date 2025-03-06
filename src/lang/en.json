@@ -32,6 +32,9 @@
     "code": "Code",
     "description": "Every project is a unique piece of development 💻",
 
+    "placeholder": {
+      "description": "Placeholder for a project description that comes out really soon!"
+    },
     "crypto": {
       "description": "React-based cryptocurrency blog with WordPress as a headless CMS. It features real-time crypto data from Coingecko, infinite scrolling, SEO optimization, and a fully responsive design."
     },

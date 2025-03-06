@@ -12,6 +12,7 @@ interface Project {
 }
 const comeincryptoSS = "./comeincryptomobile.png";
 const barberSS = "./barber.png";
+const placeholder = "./code_brackets.webp";
 const ProjectItems = () => {
   const { t } = useLanguage();
 
@@ -33,20 +34,20 @@ const ProjectItems = () => {
       technologies: ["React Native", "TypeScript", "Firebase", "Sass"],
     },
     {
-      title: "ComeInCrypto Mobile WebApp",
-      demoLink: "https://melodic-gelato-66855f.netlify.app/",
-      githubLink: "https://github.com/hustlehoff-dev/blog-react-headlesswp",
-      screenshot: comeincryptoSS,
-      description: <>{t("projects.crypto.description")}</>,
-      technologies: ["React.js", "TypeScript", "API", "Sass"],
+      title: "Coming in a few days! Really.",
+      demoLink: "",
+      githubLink: "",
+      screenshot: placeholder,
+      description: <>{t("projects.placeholder.description")}</>,
+      technologies: ["NextJS", "TypeScript", "GraphQL", "HeadlessCMS", "Sass"],
     },
     {
-      title: "ComeInCrypto Mobile WebApp",
-      demoLink: "https://melodic-gelato-66855f.netlify.app/",
-      githubLink: "https://github.com/hustlehoff-dev/blog-react-headlesswp",
-      screenshot: comeincryptoSS,
-      description: <>{t("projects.crypto.description")}</>,
-      technologies: ["React.js", "TypeScript", "API", "Sass"],
+      title: "Coming in a few days! Really.",
+      demoLink: "",
+      githubLink: "",
+      screenshot: placeholder,
+      description: <>{t("projects.placeholder.description")}</>,
+      technologies: ["Placeholder"],
     },
   ];
 

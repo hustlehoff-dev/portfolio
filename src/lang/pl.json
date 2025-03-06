@@ -32,6 +32,9 @@
     "code": "Kod",
     "description": "Każdy projekt to unikalny kawałek rozwoju 💻",
 
+    "placeholder": {
+      "description": "Placeholder w miejscu, w którym już w ciągu paru dni pojawi się kolejny projekt!"
+    },
     "crypto": {
       "description": "Blog o kryptowalutach oparty na React, z WordPress jako headless CMS. Zawiera dane o kryptowalutach w czasie rzeczywistym z Coingecko, nieskończone przewijanie, optymalizację SEO oraz w pełni responsywny design."
     },
