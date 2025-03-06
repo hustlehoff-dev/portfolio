@@ -11,7 +11,7 @@ interface Project {
   technologies: string[];
 }
 const comeincryptoSS = "./comeincryptomobile.png";
-
+const barberSS = "./barber.png";
 const ProjectItems = () => {
   const { t } = useLanguage();
 
@@ -25,12 +25,12 @@ const ProjectItems = () => {
       technologies: ["React.js", "TypeScript", "API", "Sass"],
     },
     {
-      title: "ComeInCrypto Mobile WebApp",
-      demoLink: "https://melodic-gelato-66855f.netlify.app/",
-      githubLink: "https://github.com/hustlehoff-dev/blog-react-headlesswp",
-      screenshot: comeincryptoSS,
-      description: <>{t("projects.crypto.description")}</>,
-      technologies: ["React.js", "TypeScript", "API", "Sass"],
+      title: "EssaBarber Appointment MApp",
+      demoLink: "",
+      githubLink: "",
+      screenshot: barberSS,
+      description: <>{t("projects.barber.description")}</>,
+      technologies: ["React Native", "TypeScript", "Firebase", "Sass"],
     },
     {
       title: "ComeInCrypto Mobile WebApp",
@@ -88,14 +88,16 @@ const ProjectItems = () => {
               <p>{description}</p>
 
               <span>
-                <a
-                  href={demoLink}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="project-link">
-                  <OpenInNewIcon />
-                  {t("projects.demo")}
-                </a>
+                {demoLink && (
+                  <a
+                    href={demoLink}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="project-link">
+                    <OpenInNewIcon />
+                    {t("projects.demo")}
+                  </a>
+                )}
                 {githubLink && (
                   <a
                     href={githubLink}

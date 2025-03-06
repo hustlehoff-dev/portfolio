@@ -34,6 +34,9 @@
 
     "crypto": {
       "description": "React-based cryptocurrency blog with WordPress as a headless CMS. It features real-time crypto data from Coingecko, infinite scrolling, SEO optimization, and a fully responsive design."
+    },
+    "barber": {
+      "description": "React Native-based scheduling app for a local barbershop. Uses Firebase for a serverless setup, enabling the owner to manage appointments and communicate with clients via SMS."
     }
   },
 

@@ -34,6 +34,9 @@
 
     "crypto": {
       "description": "Blog o kryptowalutach oparty na React, z WordPress jako headless CMS. Zawiera dane o kryptowalutach w czasie rzeczywistym z Coingecko, nieskończone przewijanie, optymalizację SEO oraz w pełni responsywny design."
+    },
+    "barber": {
+      "description": "Mobilna aplikacja do umawiania wizyt w lokalnym barber shopie, stworzona w React Native. Wykorzystuje Firebase jako bezserwerowe rozwiązanie, umożliwiając właścicielowi zarządzanie rezerwacjami i komunikację z klientami przez SMS."
     }
   },
 
