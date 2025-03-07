@@ -40,6 +40,9 @@
     },
     "barber": {
       "description": "Mobilna aplikacja do umawiania wizyt w lokalnym barber shopie, stworzona w React Native. Wykorzystuje Firebase jako bezserwerowe rozwiązanie, umożliwiając właścicielowi zarządzanie rezerwacjami i komunikację z klientami przez SMS."
+    },
+    "slodkiraj": {
+      "description": "SlodkiRaj to mój pierwszy projekt komercyjny dla lokalnej piekarni, specjalizującej się w pysznych ciastach. Strona została stworzona przy użyciu Next.js, headless CMS, GraphQL i ISR, zapewniając szybkie i dynamiczne aktualizacje treści. Zadbano o najlepsze praktyki SEO, responsywny układ oraz pobieranie danych w czasie rzeczywistym, co zapewnia płynne doświadczenie użytkownika."
     }
   },
 

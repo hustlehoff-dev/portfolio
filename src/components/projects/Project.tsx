@@ -12,6 +12,7 @@ interface Project {
 }
 const comeincryptoSS = "./comeincryptomobile.png";
 const barberSS = "./barber.png";
+const slodkiraj = "./slodkiraj.jpg";
 const placeholder = "./code_brackets.webp";
 const ProjectItems = () => {
   const { t } = useLanguage();
@@ -34,18 +35,19 @@ const ProjectItems = () => {
       technologies: ["React Native", "TypeScript", "Firebase", "Sass"],
     },
     {
-      title: "Coming in a few days! Really.",
-      demoLink: "",
-      githubLink: "",
-      screenshot: placeholder,
-      description: <>{t("projects.placeholder.description")}</>,
+      title: "SlodkiRaj Local Bakery",
+      demoLink: "https://slodkirajchojnice.pl",
+      githubLink:
+        "https://github.com/hustlehoff-dev/slodkiraj-nextjs-headlesswordpress",
+      screenshot: slodkiraj,
+      description: <>{t("projects.slodkiraj.description")}</>,
       technologies: [
         "NextJS",
         "TypeScript",
         "GraphQL",
         "HeadlessCMS",
         "Sass",
-        "SSR",
+        "ISR",
       ],
     },
     {

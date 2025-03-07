@@ -40,6 +40,9 @@
     },
     "barber": {
       "description": "React Native-based scheduling app for a local barbershop. Uses Firebase for a serverless setup, enabling the owner to manage appointments and communicate with clients via SMS."
+    },
+    "slodkiraj": {
+      "description": "SlodkiRaj is my first commercial project for a local bakery, specializing in delicious cakes. It was built using Next.js, headless CMS, GraphQL, and ISR for fast, dynamic content updates. Ensured best SEO practices, responsive layout, and real-time data fetching, provide a seamless user experience."
     }
   },
 
